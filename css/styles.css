@@ -308,7 +308,8 @@ input {
   overflow: hidden;
 }
 
-.card__header, .card__body {
+.card__header, 
+.card__body {
   padding: 2rem 3rem;
 }
 
