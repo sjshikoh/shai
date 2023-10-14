@@ -321,7 +321,7 @@ input {
 
 .card__header, 
 .card__body {
-  padding: 2rem 3rem;
+  padding: 2rem 7%;
 }
 
 .card--primary .card__header {
@@ -333,11 +333,19 @@ input {
   color: #fff;
 }
 
+.card--primary .badge--primary {
+  background: #126de4;
+}
+
 .card--secondary .badge--secondary {
   background: #02cdf1;
 }
 
 /* plans */
+
+.plan {
+  transition: transform 0.2s ease-out;
+}
 .plan__name {
   color: #fff;
   margin: 0;
@@ -346,7 +354,7 @@ input {
 }
 
 .plan__price {
-  font-size: 6rem;
+  font-size: 5rem;
 }
 
 .plan__billing-cycle {
@@ -380,8 +388,19 @@ input {
   right: 5%;
 }
 
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
+}
+
 @media screen and (min-width: 1024px) {
-  .plan__name {
+  .plan--popular {
+    transform: scale(1.1);
+  }
+    .plan__name {
     font-size: 1.4rem;
   }
 
@@ -733,4 +752,14 @@ nav {
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
+}
+
+/* Plans Block */
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
 }
